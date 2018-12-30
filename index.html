@@ -3,6 +3,9 @@
     <head>
         <link href="https://fonts.googleapis.com/css?family=Patua+One|Playfair+Display|Oswald:regular,medium" rel="stylesheet"> 
         <style>
+            body {
+                padding-bottom: 20px;
+            }
             #logo {
                 display: block;
                 margin-left: auto;
@@ -38,7 +41,7 @@
                 white-space: pre;
                 margin-top: 12px;
             }
-            
+
             #pitch {
                 margin-left: auto;
                 margin-right: auto;
@@ -49,22 +52,64 @@
                 font-family: 'Oswald', sans-serif;
                 margin-top: 10px;
             }
-            
-            #kontakt {
+
+            #contact {
                 max-width: 600px;
                 margin-left: auto;
                 margin-right: auto;
             }
-            #email {
+            #contact p {
                 text-align: center;
                 font-family: 'Oswald', sans-serif;
                 font-size: 25px;
                 margin-top: 10px;
             }
+
+            #contact-form {
+                max-width: 600px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            form {
+                font-family: 'Oswald', sans-serif;
+                font-size: 20px;
+                background-color: #66a864;
+                border-radius: 5px;
+                padding-top: 25px;
+                padding-bottom: 25px;
+                padding-left: 25px;
+                padding-right: 25px;
+            }
+            input {
+                display: inline-grid;
+                width: 40%;
+            }
+            input[type=submit] {
+                font-family: 'Oswald', sans-serif;
+                font-size: 20px;
+                border: 0 none;
+                margin-top: 15px;
+                height: 40px;
+                border-radius: 10px;
+            }
+            input[name="email-address"] {
+                margin-left: 29px;
+                margin-bottom: 5px;
+            }
+            input[name="subject"] {
+                margin-left: 22px;
+                margin-bottom: 5px;
+            }
+            input[type=submit]:hover {
+                background-color: #afb5b3;
+            }
+            textarea {
+                width: 100%;
+                resize: none;
+            }
         </style>
         <title>Schulteich Revival</title>
-    </head>
-    <body>
+    </head> <body>
         <img id="logo" src="img/schulteichLogo.jpg"/>
         <h1>Schulteich Revival</h1>
         <!-- Candidates:
@@ -78,22 +123,22 @@
             ― Albert Einstein
 
             “The poetry of the earth is never dead.”
-            ― John Keats 
+            ― John Keats
 
             “The creation of a thousand forests is in one acorn”
-            ― Ralph Waldo Emerson 
+            ― Ralph Waldo Emerson
 
             “Nature is not a place to visit. It is home.”
-            ― Gary Snyder 
+            ― Gary Snyder
 
             “Heaven is under our feet as well as over our heads.”
-            ― Henry David Thoreau, Walden 
-            
+            ― Henry David Thoreau, Walden
+
             “Looking at beauty in the world, is the first step of purifying the mind.”
-            ― Amit Ray, Meditation: Insights and Inspirations 
-            
+            ― Amit Ray, Meditation: Insights and Inspirations
+
             “To sit in the shade on a fine day, and look upon verdure is the most perfect refreshment.”
-            ― Jane Austen 
+            ― Jane Austen
         --!>
         <div id="quote">
         <p>&ldquo;To sit in the shade on a fine day, and look upon verdure is the<br/>  most perfect refreshment.&rdquo; &mdash; Jane Austen</p>
@@ -101,16 +146,28 @@
         <div id="pitch">
             <h2>&mdash; Was? &mdash;</h2>
             <p>
-            Wir restaurieren den Schulteich als 
-            Lebensraum f&uuml;r Tiere und als Lernort. 
-            Hier machen wir Natur und Artenvielfalt f&uuml;r 
+            Wir restaurieren den Schulteich als
+            Lebensraum f&uuml;r Tiere und als Lernort.
+            Hier machen wir Natur und Artenvielfalt f&uuml;r
             die Sch&uuml;ler des Gymnasiums wieder erlebbar.
             </p>
         </div>
 
-        <div id="kontakt">
+        <div id="contact">
             <h2>&mdash; Kontakt &mdash;</h2>
-            <p id="email">Email: www.wvsgym@schulteich.de</p>
+            <p>Email: www.wvsgym@schulteich.de</p>
+        </div>
+        <div id="contact-form">
+            <h2>&mdash; Nachricht &mdash;</h2>
+            <form method="post" action="form-to-email.php">
+                <label for="email-address">Email:</label>
+                <input type="text" name="email-address" placeholder="max.mustermann@gmail.com" required><br>
+                <label for="subject">Betreff:</label>
+                <input type="text" name="subject" placeholder="Spenden"><br>
+                <label for="message">Nachricht:</label><br>
+                <textarea name="message" rows="6" required></textarea>
+                <input type="submit" value="Absenden">
+            </form>
         </div>
 
         <div id="donate">
